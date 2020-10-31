@@ -1,0 +1,14 @@
+.container-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: #0074D9;
+  height: 100px;
+}
+
+.item1 {
+  color: white;
+}
