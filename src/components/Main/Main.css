@@ -1,0 +1,22 @@
+.Main {
+    flex-grow: 1;
+  }
+  
+   
+  .Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+    color: var(--main-white-color);
+  }
+   
+  .Main div {
+    max-width: 500px;
+  }
+   
+  @media screen and (min-width: 768px) {
+    .Main {
+      padding-left: 90px;
+    }
+  }
