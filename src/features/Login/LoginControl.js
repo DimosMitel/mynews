@@ -10,11 +10,7 @@ const LoginControl = (props) => {
     password: '', 
    })
    const [error, setError] = React.useState("");
-   
-   const [passwordStrength, setPasswordStrength] = React.useState("");
-   const [passwordStrengthBorder, setPasswordStrengthBorder] = React.useState("");
-    
-   
+
     // Use the submitted data to set the state
    
    const handleChange = (event) => {
@@ -67,7 +63,7 @@ const LoginControl = (props) => {
     }
   
   /*
-  * the functions for our button
+  * the functions for button
   */
   const previousButton = () => {
     let currentStep = form.currentStep;
@@ -110,7 +106,7 @@ const LoginControl = (props) => {
         <div className="wrap">  
         <form onSubmit={handleSubmit}>
         <div className="form-header">
-          <h3 role="heading">Login</h3>
+          <h3>Login</h3>
         </div>
           <Step1 
             currentStep={form.currentStep} 
