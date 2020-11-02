@@ -14,14 +14,6 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install dependencies
-<<<<<<< HEAD
-        run: npm install
-      - name: Lint
-        run: npm run lint
-      - name: Test
-        run: npm run test
-=======
         run: npm ci
->>>>>>> 238fffd7169fe21e1f485d72fa7c3defba384111
       - name: Build deployment package
         run: npm run build
