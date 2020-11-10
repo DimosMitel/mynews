@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Step1 from './Step1';
+import Step2 from './Step2';
 
 import './Login.css';
 
@@ -113,6 +114,12 @@ const LoginControl = (props) => {
             handleChange={handleChange}
             username={form.username}
             error={error}
+            
+          />
+          <Step2 
+            currentStep={form.currentStep} 
+            handleChange={handleChange}
+            password={form.password}
             
           />
       
