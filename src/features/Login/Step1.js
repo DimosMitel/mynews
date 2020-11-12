@@ -2,7 +2,6 @@ import React from 'react';
 
 const Step1 = (props) => {
 
-  
     if (props.currentStep !== 1) { // Prop: The current step
         return null
       }
@@ -10,6 +9,9 @@ const Step1 = (props) => {
       return(
         <div className="form-group">
           <label htmlFor="username"><strong>Username</strong></label>
+          
+          {props.validation()}
+          
           <input
             className="form-input"
             id="username"
@@ -20,7 +22,7 @@ const Step1 = (props) => {
             onChange={props.handleChange} // Prop: Puts data into state
           />
           {props.error && (
-           <p>{props.error}</p>
+            <p>{props.error}</p>
           )}
         </div>
       )
