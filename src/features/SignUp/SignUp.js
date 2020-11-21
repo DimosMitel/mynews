@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Step1 from './Step1';
+import Step2 from './Step2';
 import './SignUp.css';
 
 
@@ -27,7 +28,10 @@ const SignUp = (props) => {
     
     const _next = () => {
       let curStep = form.currentStep
-
+     
+        curStep = form.currentStep === 2 ? 2: form.currentStep + 1
+        
+    
       setValues(prevState => ({
         ...prevState,
         currentStep: curStep
@@ -36,7 +40,7 @@ const SignUp = (props) => {
       
     const _prev = () => {
       let curStep = form.currentStep
- 
+        curStep = form.currentStep <= 1? 1: form.currentStep - 1
       setValues(prevState => ({
         ...prevState,
         currentStep: curStep
@@ -92,6 +96,11 @@ const SignUp = (props) => {
             handleChange={handleChange}
             email={form.email}
             username={form.username}
+          />
+            <Step2 
+            currentStep={form.currentStep} 
+            handleChange={handleChange}
+            password={form.password}
           />
           {previousButton()}
           {nextButton()}
