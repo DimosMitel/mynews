@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Step1 = (props) => {
 
   
@@ -12,6 +11,7 @@ const Step1 = (props) => {
         <div>
         <div className="form-group">
           <label htmlFor="username">Username
+          {props.validation()}
           <input
             className="form-input"
             id="username"
@@ -21,7 +21,13 @@ const Step1 = (props) => {
             value={props.username} // Prop: The username input data
             onChange={props.handleChange} // Prop: Puts data into state
           />
-          </label>          
+          </label>
+          <div>
+            {props.error && props.username && (
+             <p>{props.error}</p>
+            )}
+            </div>
+          
                
           </div>
           <div className="form-group">
@@ -36,6 +42,9 @@ const Step1 = (props) => {
             onChange={props.handleChange} // Prop: Puts data into state
           />
           </label>
+          {props.error && props.email &&(
+                    <p>{props.error}</p>
+                  )}
           </div>
           </div>
         
@@ -43,8 +52,3 @@ const Step1 = (props) => {
 }
 
 export default Step1
-
-    
-     
-    
-  
