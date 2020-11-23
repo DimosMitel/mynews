@@ -28,7 +28,7 @@ const Step2 = (props) => {
                     <p>{props.error}</p>
                   )}
             <hr />       
-             <div class="form-footer">
+             <div className="form-footer">
               Already have an account? <Link role="link" to="/login">Login</Link> 
             </div>   
         </div>
